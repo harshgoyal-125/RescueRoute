@@ -1,0 +1,41 @@
+services:
+  # Backend API Web Service
+  - type: web
+    name: rescueroute-backend
+    env: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRES_IN
+        value: 7d
+      - key: MONGODB_URI
+        sync: false
+      - key: CLIENT_URL
+        sync: false
+
+  # Frontend Static Site
+  - type: web
+    name: rescueroute-frontend
+    env: static
+    plan: free
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: VITE_API_URL
+        fromService:
+          type: web
+          name: rescueroute-backend
+          property: host
