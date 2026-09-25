@@ -1,0 +1,130 @@
+export const FOOD_TYPES = [
+  'Prepared Meals',
+  'Bakery',
+  'Fruits & Vegetables',
+  'Packaged Food',
+  'Dairy'
+];
+
+export const QUANTITY_UNITS = [
+  'meals',
+  'lbs',
+  'kg',
+  'boxes',
+  'trays'
+];
+
+export const INITIAL_DONATIONS = [
+  {
+    id: 'DON-101',
+    foodType: 'Prepared Meals',
+    foodName: 'Roasted Chicken & Quinoa Bowls',
+    quantity: 45,
+    unit: 'meals',
+    donorName: 'Green Leaf Bistro',
+    pickupLocation: '142 Market Street, Back Entrance',
+    availableUntil: '2026-09-24T19:30',
+    description: 'Freshly prepped boxed hot meals from corporate catering lunch event. Fully sealed and temperature-controlled.',
+    contactInfo: 'Marcus V. (555) 234-5678',
+    status: 'DRIVER ASSIGNED',
+    matchedWith: 'Hope Community Shelter',
+    driverAssigned: 'Alex Rivera',
+    createdAt: '2026-09-24T14:00'
+  },
+  {
+    id: 'DON-102',
+    foodType: 'Bakery',
+    foodName: 'Artisan Sourdough & Baguettes',
+    quantity: 30,
+    unit: 'lbs',
+    donorName: 'Golden Crust Bakery',
+    pickupLocation: '405 Pine Street, Front Counter',
+    availableUntil: '2026-09-24T21:00',
+    description: 'Surplus daily bake loaves. Packaged in sanitized food-grade paper bags.',
+    contactInfo: 'Clara Oswald (555) 321-7654',
+    status: 'MATCHED',
+    matchedWith: 'St. Vincent Dining Hall',
+    driverAssigned: null,
+    createdAt: '2026-09-24T15:15'
+  },
+  {
+    id: 'DON-103',
+    foodType: 'Fruits & Vegetables',
+    foodName: 'Organic Apples, Oranges & Kale',
+    quantity: 60,
+    unit: 'lbs',
+    donorName: 'Valley Fresh Market',
+    pickupLocation: '1200 Commercial Way, Loading Bay 2',
+    availableUntil: '2026-09-25T11:00',
+    description: 'Slightly imperfect aesthetic produce, perfectly crisp and nutritious.',
+    contactInfo: 'Dave Miller (555) 888-9900',
+    status: 'POSTED',
+    matchedWith: null,
+    driverAssigned: null,
+    createdAt: '2026-09-24T15:45'
+  },
+  {
+    id: 'DON-104',
+    foodType: 'Dairy',
+    foodName: 'Organic Whole Milk & Greek Yogurt',
+    quantity: 25,
+    unit: 'boxes',
+    donorName: 'Clover Dairy Hub',
+    pickupLocation: '88 Dairy Way, Refrigerated Dock C',
+    availableUntil: '2026-09-24T18:00',
+    description: 'Refrigerated milk cartons and yogurts near sell-by date. Kept at 36°F constantly.',
+    contactInfo: 'Sarah Jenkins (555) 654-3210',
+    status: 'PICKED UP',
+    matchedWith: 'Hope Community Shelter',
+    driverAssigned: 'Jordan Lee',
+    createdAt: '2026-09-24T12:30'
+  },
+  {
+    id: 'DON-105',
+    foodType: 'Prepared Meals',
+    foodName: 'Vegetable Lasagna & Garlic Bread',
+    quantity: 50,
+    unit: 'meals',
+    donorName: 'Bella Cucina Trattoria',
+    pickupLocation: '77 Broad Street, Kitchen Exit',
+    availableUntil: '2026-09-24T16:00',
+    description: 'Catering pans of warm vegetarian lasagna, packed in thermal safe containers.',
+    contactInfo: 'Chef Antonio (555) 432-1098',
+    status: 'DELIVERED',
+    matchedWith: 'City Mission Shelter',
+    driverAssigned: 'Alex Rivera',
+    createdAt: '2026-09-24T10:15'
+  },
+  {
+    id: 'DON-106',
+    foodType: 'Packaged Food',
+    foodName: 'High-Protein Grain Bars & Soups',
+    quantity: 120,
+    unit: 'boxes',
+    donorName: 'Apex Logistics Pantry',
+    pickupLocation: '500 Distribution Rd, Gate 4',
+    availableUntil: '2026-09-28T17:00',
+    description: 'Shelf-stable unopened boxed snack bars and lentil soups.',
+    contactInfo: 'Logistics Desk (555) 111-2233',
+    status: 'POSTED',
+    matchedWith: null,
+    driverAssigned: null,
+    createdAt: '2026-09-24T16:00'
+  },
+  {
+    id: 'DON-107',
+    foodType: 'Prepared Meals',
+    foodName: 'Assorted Gourmet Sandwiches',
+    quantity: 20,
+    unit: 'meals',
+    donorName: 'Metro Deli',
+    pickupLocation: '12 6th St',
+    availableUntil: '2026-09-23T19:00',
+    description: 'Wraps and cold sandwiches from seminar.',
+    contactInfo: 'Samir (555) 777-6655',
+    status: 'CANCELLED',
+    matchedWith: null,
+    driverAssigned: null,
+    createdAt: '2026-09-23T14:00'
+  }
+];
