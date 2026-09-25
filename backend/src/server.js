@@ -5,7 +5,12 @@ import { ENV } from './config/env.js';
 async function startServer() {
   try {
     // Attempt database connection
-    await connectDB();
+    try {
+      await connectDB();
+    } catch (dbErr) {
+      console.warn(`[MongoDB Notice]: Initial connection pending: ${dbErr.message}`);
+      console.warn('[MongoDB Notice]: Ensure MONGODB_URI is configured in Render environment variables.');
+    }
 
     const server = app.listen(ENV.PORT, () => {
       console.info(`[RescueRoute Backend] Server running in ${ENV.NODE_ENV} mode on port ${ENV.PORT}`);
