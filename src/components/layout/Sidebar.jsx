@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 import { useLanguage } from '../../context/LanguageContext';
+import logoImg from '../../assets/logo.jpeg';
 
 export default function Sidebar({ isOpen, onClose }) {
   const { currentUser, currentRole, logout } = useApp();
@@ -53,7 +54,7 @@ export default function Sidebar({ isOpen, onClose }) {
         <div className="sidebar-header" style={{ justifyContent: 'space-between' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
             <div className="brand-icon" style={{ overflow: 'hidden', padding: 0 }}>
-              <img src="/logo.jpeg" alt="RescueRoute Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <img src={logoImg} alt="RescueRoute Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
             <div>
               <div className="brand-name">

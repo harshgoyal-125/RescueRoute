@@ -20,6 +20,7 @@ import Card from '../../components/common/Card';
 import Button from '../../components/common/Button';
 import FormField from '../../components/common/FormField';
 import RescueRouteMap from '../../components/maps/RescueRouteMap';
+import logoImg from '../../assets/logo.jpeg';
 
 const SF_DISTRICT_PRESETS = [
   { name: 'Downtown / Tenderloin', address: '201 Turk Street, San Francisco, CA', lat: 37.7831, lng: -122.4140 },
@@ -268,7 +269,7 @@ export default function PublicFoodRequestPage() {
             className="brand-icon"
             style={{ width: '54px', height: '54px', margin: '0 auto 0.75rem auto', borderRadius: '14px', overflow: 'hidden', padding: 0 }}
           >
-            <img src="/logo.jpeg" alt="RescueRoute Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            <img src={logoImg} alt="RescueRoute Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
           <h1 style={{ fontSize: '1.875rem', fontWeight: 800, color: 'var(--slate-900)', letterSpacing: '-0.03em' }}>
             Request Surplus Food Assistance

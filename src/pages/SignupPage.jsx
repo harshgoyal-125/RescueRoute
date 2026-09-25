@@ -24,6 +24,7 @@ import { useTheme } from '../context/ThemeContext';
 import Card from '../components/common/Card';
 import Button from '../components/common/Button';
 import FormField from '../components/common/FormField';
+import logoImg from '../assets/logo.jpeg';
 
 export default function SignupPage() {
   const { register } = useApp();
@@ -256,7 +257,7 @@ export default function SignupPage() {
               padding: 0
             }}
           >
-            <img src="/logo.jpeg" alt="RescueRoute Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            <img src={logoImg} alt="RescueRoute Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', marginBottom: '0.25rem' }}>
             <h1

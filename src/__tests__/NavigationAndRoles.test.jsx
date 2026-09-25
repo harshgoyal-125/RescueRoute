@@ -33,7 +33,8 @@ describe('Role Navigation and Route Handling', () => {
     expect(screen.getByTestId('login-submit-btn')).toBeInTheDocument();
     const logoImg = screen.getByAltText('RescueRoute Logo');
     expect(logoImg).toBeInTheDocument();
-    expect(logoImg).toHaveAttribute('src', '/logo.jpeg');
+    expect(logoImg).toHaveAttribute('src');
+    expect(logoImg.getAttribute('src')).toContain('logo');
   });
 
   it('requires registered credentials to sign in and rejects unregistered account', async () => {
