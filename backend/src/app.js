@@ -28,9 +28,14 @@ const allowedOrigins = [ENV.CLIENT_URL, 'http://localhost:5173', 'http://127.0.0
 
 app.use(cors({
   origin: function (origin, callback) {
-    // Allow server-to-server or tools without origin (e.g. curl, vitest)
     if (!origin) return callback(null, true);
-    if (allowedOrigins.includes(origin) || origin.startsWith('http://localhost:')) {
+    if (
+      allowedOrigins.includes(origin) ||
+      origin.startsWith('http://localhost:') ||
+      origin.includes('github.io') ||
+      origin.includes('onrender.com') ||
+      origin.includes('lhr.life')
+    ) {
       return callback(null, true);
     }
     return callback(new Error(`CORS policy blocks requests from origin: ${origin}`));
